@@ -687,7 +687,7 @@ class Tracer(object):
         accumulate a basic block trace using qemu
         '''
         fd, lname = tempfile.mkstemp(dir="/dev/shm", prefix="tracer-log-")
-        args = ['/home/qemu2.3/qemu/x86_64-linux-user/qemu-x86_64']
+        args = [self.tracer_qemu_path]
 
         if self.seed is not None:
             args += ["-seed", self.seed]
