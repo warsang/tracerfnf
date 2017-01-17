@@ -321,7 +321,7 @@ class Tracer(object):
                 current.trim_history()
 
             self.prev_path_group = self.path_group
-            self.path_group = self.path_group.step(max_size=bbl_max_bytes)
+            self.path_group = self.path_group.step(size=bbl_max_bytes)
 
             # if our input was preconstrained we have to keep on the lookout
             # for unsat paths
